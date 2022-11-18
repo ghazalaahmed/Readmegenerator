@@ -1,14 +1,15 @@
+function renderLicenseBadge(license) {
+  if (license === "MIT")
+    return "![ Github license](https://img.shields.io/badge/License-${license}-blue.svg)";
+}
+
 //function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-}
 
   ## License
-  function renderLicenseBadge(license) {
-  if (license === "MIT")
-    return "![ Github license](https://img.shields.io/badge/License-${license}-blue.svg)";
-  }
- 
+  ${renderLicenseBadge(data.license)}
+
   ## Description 
   ${data.description}
   
@@ -36,7 +37,9 @@ function generateMarkdown(data) {
   ${data.test}
   
   ## Questions
-  Please don't hesitate to contact me at ${data.email}. You can view more of my projects at https://github.com/${data.github}
+  Please don't hesitate to contact me at ${
+    data.email
+  }. You can view more of my projects at https://github.com/${data.github}
   `;
 }
 
