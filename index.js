@@ -84,16 +84,16 @@ const questions = [
     },
   },
   {
-    type: "input"
-    name: "Issues"
+    type: "input",
+    name: "Issues",
     message: "How do you report issues? (Required)",
-    validate: (issuesInput) ==> {
-        if (issuesInput) {
-            return true;
-          }  else {
-            console.log("How do you report issues?");
-            return false;
-        }
+    validate: (issuesInput) => {
+      if (issuesInput) {
+        return true;
+      } else {
+        console.log("How do you report issues?");
+        return false;
+      }
     },
   },
 
@@ -181,16 +181,16 @@ function init() {
 
 // Function call to initialize app
 init()
-.then(readmeData => {
+  .then((readmeData) => {
     console.log(readmeData);
     return generateMarkdown(readmeData);
-})
-.then(pageMD => {
+  })
+  .then((pageMD) => {
     return writeToFile(pageMD);
-})
-.then(writeToFileResponse => {
+  })
+  .then((writeToFileResponse) => {
     console.log(writeToFileResponse.message);
-})
-.catch(err => {
+  })
+  .catch((err) => {
     console.log(err);
-})
+  });
