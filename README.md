@@ -9,10 +9,10 @@ This included answering a series of questions in the command-line.
 
 - [INSTALLATION](#installation0)
 - [USAGE](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+- [LICENSE](#license)
+- [CONTRIBUTING](#contributing)
+- [TESTS](#tests)
+- [QUESTIONS](#questions)
 
 ## INSTALLATION
 
